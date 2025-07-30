@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 async function dareCommand(sock, chatId, message) {
     try {
-        const shizokeys = '*LOFT-XMD* 💥';
+        const shizokeys = '*𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD* 💥';
         const res = await fetch(`https://api.shizo.top/api/quote/dare?apikey=${shizokeys}`);
         
         if (!res.ok) {
