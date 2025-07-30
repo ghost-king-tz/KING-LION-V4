@@ -117,7 +117,7 @@ async function viewOnceCommand(sock, chatId, message) {
 
                 await sock.sendMessage(chatId, { 
                     video: fs.readFileSync(tempFile),
-                    caption: `*💀 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 Anti ViewOnce 💀*\n\n*Type:* Video 📹\n${caption ? `*Caption:* ${caption}` : ''}`,
+                    caption: `*💀 *KING-LION-V4* 💥 Anti ViewOnce 💀*\n\n*Type:* Video 📹\n${caption ? `*Caption:* ${caption}` : ''}`,
                     ...channelInfo
                 });
 
