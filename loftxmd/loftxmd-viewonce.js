@@ -1,4 +1,4 @@
-const { downloadContentFromMessage } = require('@whiskeysockets/baileys');
+Rconst { downloadContentFromMessage } = require('@whiskeysockets/baileys');
 const settings = require('../settings');
 const fs = require('fs');
 const path = require('path');
@@ -10,7 +10,7 @@ const channelInfo = {
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
             newsletterJid: '120363398106360290@newsletter',
-            newsletterName: '*LOFT-XMD* 🐛',
+            newsletterName: '*𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD* 🐛',
             serverMessageId: -1
         }
     }
