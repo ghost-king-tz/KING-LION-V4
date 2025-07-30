@@ -8,7 +8,7 @@ async function githubCommand(sock, chatId, message) {
     const json = await res.json();
 
     const caption = `
-*乂  L O F T  乂*
+*乂  𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝 乂*
 
 ✩  *Name*: ${json.name}
 ✩  *Watchers*: ${json.watchers_count}
@@ -18,7 +18,7 @@ async function githubCommand(sock, chatId, message) {
 ✩  *Forks*: ${json.forks_count}
 ✩  *Stars*: ${json.stargazers_count}
 
-「Powered by LOFT-XMD」
+「Powered by 𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD」
 `.trim();
 
     await sock.sendMessage(chatId, {
