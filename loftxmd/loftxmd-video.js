@@ -98,7 +98,7 @@ async function videoCommand(sock, chatId, message) {
                 video: { url: convertedFile },
                 mimetype: 'video/mp4',
                 fileName: filename,
-                caption: `*${title}*\n\n> *_Downloaded by smash_*`
+                caption: `*${title}*\n\n> *_Downloaded by king-lion-v4*`
             }, { quoted: message });
             
         } catch (conversionError) {
@@ -108,7 +108,7 @@ async function videoCommand(sock, chatId, message) {
                 video: { url: tempFile },
                 mimetype: 'video/mp4',
                 fileName: filename,
-                caption: `*${title}*\n\n> *_Downloaded by smash_*`
+                caption: `*${title}*\n\n> *_Downloaded by king-lion-v4*`
             }, { quoted: message });
         }
 
