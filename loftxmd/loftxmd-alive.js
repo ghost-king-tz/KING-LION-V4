@@ -3,7 +3,7 @@ async function aliveCommand(sock, chatId, message) {
     try {
         // Tuma video yenye caption ya alive
         await sock.sendMessage(chatId, {
-            video: { url: 'https://files.catbox.moe/gkchfw.mp4' }, // au tumia link ya attachment
+            video: { url: 'https://files.catbox.moe/bt5gb6.mp4' }, // au tumia link ya attachment
             caption: `
 ═══════════════
 KING LION 🦁: STATUS  [ ONLINE ]*
@@ -27,7 +27,7 @@ Type *.menu* kuona commands zote.
 
     } catch (error) {
         console.error('Error in alive command:', error);
-        await sock.sendMessage(chatId, { text: 'Loft XMD bot iko hewani!' }, { quoted: message });
+        await sock.sendMessage(chatId, { text: 'KING LION bot iko hewani!' }, { quoted: message });
     }
 }
 
