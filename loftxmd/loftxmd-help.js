@@ -2,64 +2,164 @@ const settings = require('../settings');
 const fs = require('fs');
 const path = require('path');
 
-const menuData = [
-  {
-    title: "🛡️ GENERAL COMMAND",
-    image: 'https://yourdomain.com/general.jpg',
-    audio: 'https://yourdomain.com/general.mp3',
-    commands: [
-      '.help or.menu', '.ping', '.alive', '.tts <text>', '.owner', '.joke', '.quote', '.fact', '.weather <city>',
-      '.news', '.attp <text>', '.lyrics <song_title>', '.8ball <question>', '.groupinfo', '.staff or.admins',
-      '.vv', '.trt <text> <lang>', '.ss <link>', '.jid'
-    ]
-  },
-  {
-    title: "⚙️ ADMIN COMMANDS",
-    image: 'https://yourdomain.com/admin.jpg',
-    audio: 'https://yourdomain.com/admin.mp3',
-    commands: [
-      '.ban @user', '.promote @user', '.demote @user', '.mute <minutes>', '.unmute', '.delete or.del', '.kick @user',
-      '.warnings @user', '.warn @user', '.antilink', '.antibadword', '.clear', '.tag <message>', '.tagall',
-      '.chatbot', '.resetlink', '.welcome <on/off>', '.goodbye <on/off>'
-    ]
-  },
-  //... ongeza section nyingine hapa kwa muundo huu
-];
-
 async function helpCommand(sock, chatId, message) {
-    const menuHeader = `\u200F
+    const helpMessage = `
 > ─────────────  
->    KING 👑 LION 🦁  
-> ─────────────`;
-
-    // Tuma "menu header"
-    await sock.sendMessage(chatId, {
-        text: menuHeader,
-        contextInfo: { forwardingScore: 1, isForwarded: true }
-    }, { quoted: message });
-
-    // Loop sections, tuma section moja moja (kila moja na picha & audio yake)
-    for (const section of menuData) {
-        let caption = `\u200F
-> ${section.title}  
-${section.commands.map(c=>`> 🩸 ${c}`).join('\n')}
-`;
-
-        // Tuma picha na caption ya section
+> KING 👑 LION 🦁
+> ─────────────  
+> —𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀—  
+>   
+> 🛡️ GENERAL COMMAND 🛡️  
+> 🩸 .help or .menu  
+> 🩸 .ping  
+> 🩸 .alive  
+> 🩸 .tts <text>  
+> 🩸 .owner  
+> 🩸 .joke  
+> 🩸 .quote  
+> 🩸 .fact  
+> 🩸 .weather <city>  
+> 🩸 .news  
+> 🩸 .attp <text>  
+> 🩸 .lyrics <song_title>  
+> 🩸 .8ball <question>  
+> 🩸 .groupinfo  
+> 🩸 .staff or .admins  
+> 🩸 .vv  
+> 🩸 .trt <text> <lang>  
+> 🩸 .ss <link>  
+> 🩸 .jid  
+>   
+> ⚙️ ADMIN COMMANDS ⚙️  
+> 🩸 .ban @user  
+> 🩸 .promote @user  
+> 🩸 .demote @user  
+> 🩸 .mute <minutes>  
+> 🩸 .unmute  
+> 🩸 .delete or .del  
+> 🩸 .kick @user  
+> 🩸 .warnings @user  
+> 🩸 .warn @user  
+> 🩸 .antilink  
+> 🩸 .antibadword  
+> 🩸 .clear  
+> 🩸 .tag <message>  
+> 🩸 .tagall  
+> 🩸 .chatbot  
+> 🩸 .resetlink  
+> 🩸 .welcome <on/off>  
+> 🩸 .goodbye <on/off>  
+>   
+> 👑 OWNER COMMANDS 👑  
+> 🩸 .mode  
+> 🩸 .autostatus  
+> 🩸 .clearsession  
+> 🩸 .antidelete  
+> 🩸 .cleartmp  
+> 🩸 .setpp <reply to image>  
+> 🩸 .autoreact  
+>   
+> 🎨 IMAGE/STICKER COMMANDS 🎨  
+> 🩸 .blur <image>  
+> 🩸 .simage <reply to sticker>  
+> 🩸 .sticker <reply to image>  
+> 🩸 .tgsticker <Link>  
+> 🩸 .meme  
+> 🩸 .take <packname>  
+> 🩸 .emojimix <emj1>+<emj2>  
+>   
+> 🎮⚡ GAME COMMAND ⚡🎮  
+> 🩸 .tictactoe @user  
+> 🩸 .hangman  
+> 🩸 .guess <letter>  
+> 🩸 .trivia  
+> 🩸 .answer <answer>  
+> 🩸 .truth  
+> 🩸 .dare  
+>   
+> 🤖✨ AI COMMAND ✨🤖  
+> 🩸 .gpt <question>  
+> 🩸 .gemini <question>  
+> 🩸 .imagine <prompt>  
+> 🩸 .flux <prompt>  
+>   
+> 😂🎉 Fun command 🎉😂  
+> 🩸 .compliment @user  
+> 🩸 .insult @user  
+> 🩸 .flirt  
+> 🩸 .shayari  
+> 🩸 .goodnight  
+> 🩸 .roseday  
+> 🩸 .character @user  
+> 🩸 .wasted @user  
+> 🩸 .ship @user  
+> 🩸 .simp @user  
+> 🩸 .stupid @user [text]  
+>   
+> 🔤 Text Maker:  
+> 🩸 .metallic <text>  
+> 🩸 .ice <text>  
+> 🩸 .snow <text>  
+> 🩸 .impressive <text>  
+> 🩸 .matrix <text>  
+> 🩸 .light <text>  
+> 🩸 .neon <text>  
+> 🩸 .devil <text>  
+> 🩸 .purple <text>  
+> 🩸 .thunder <text>  
+> 🩸 .leaves <text>  
+> 🩸 .1917 <text>  
+> 🩸 .arena <text>  
+> 🩸 .hacker <text>  
+> 🩸 .sand <text>  
+> 🩸 .blackpink <text>  
+> 🩸 .glitch <text>  
+> 🩸 .fire <text>  
+>   
+> ⏬⚡ Download commands ⚡⏬  
+> 🩸 .play <song_name>  
+> 🩸 .song <song_name>  
+> 🩸 .instagram <link>  
+> 🩸 .facebook <link>  
+> 🩸 .tiktok <link>  
+> 🩸 .video <song name>  
+> 🩸 .ytmp4 <Link>  
+>   
+> 🔗📂 GitHub Menu 📂🔗  
+> 🩸 .git  
+> 🩸 .github  
+> 🩸 .sc  
+> 🩸 .script  
+> 🩸 .repo  
+......................
+  try {
+        // Send Catbox image with caption
         await sock.sendMessage(chatId, {
-            image: { url: section.image },
-            caption: caption,
-            contextInfo: { forwardingScore: 1, isForwarded: true }
+            image: { url:'https://files.catbox.moe/fwoxv5.jpg' },
+            caption: helpMessage,
+            contextInfo: {
+                forwardingScore: 1,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363161513685998@newsletter',
+                    newsletterName: 'KING LION',
+                    serverMessageId: -1
+                }
+            }
         }, { quoted: message });
 
-        // Tuma audio ya section (optional)
-        if(section.audio){
-            await sock.sendMessage(chatId, {
-                audio: { url: section.audio },
-                mimetype: 'audio/mp4',
-                ptt: true
-            }, { quoted: message });
-        }
+        // Send Catbox audio
+        await sock.sendMessage(chatId, {
+            audio: { url: 'https://files.catbox.moe/ohnx8v.mp3' },
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: message });
+
+    } catch (error) {
+        console.error('Error in help command:', error);
+        await sock.sendMessage(chatId, { text: helpMessage });
     }
+}
 
 module.exports = helpCommand;
+
