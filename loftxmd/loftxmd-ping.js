@@ -30,7 +30,7 @@ async function pingCommand(sock, chatId, message) {
 
         // Tuma video na caption
         await sock.sendMessage(chatId, {
-            video: { url: 'https://files.catbox.moe/gkchfw.mp4' },
+            video: { url:'https://files.catbox.moe/bt5gb6.mp4' },
             caption: videoCaption
         }, { quoted: message });
 
@@ -43,7 +43,7 @@ async function pingCommand(sock, chatId, message) {
 
     } catch (error) {
         console.error('Error in ping command:', error);
-        await sock.sendMessage(chatId, { text: ' Loft XMD ping .' });
+        await sock.sendMessage(chatId, { text: ' KING LION ping .' });
     }
 }
 
