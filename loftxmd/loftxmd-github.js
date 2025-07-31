@@ -26,7 +26,7 @@ async function githubCommand(sock, chatId, message) {
       caption: caption
     }, { quoted: message });
   } catch (error) {
-    await sock.sendMessage(chatId, { text: 'W A I T.' }, { quoted: message });
+    await sock.sendMessage(chatId, { text: 'FOR SALE.' }, { quoted: message });
   }
 }
 
