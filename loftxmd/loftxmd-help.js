@@ -135,7 +135,7 @@ async function helpCommand(sock, chatId, message) {
   try {
         // Send Catbox image with caption
         await sock.sendMessage(chatId, {
-            image: { url:'https://files.catbox.moe/fwoxv5.jpg' },
+            image: { url:'https://files.catbox.moe/9xr1nl.jpg' },
             caption: helpMessage,
             contextInfo: {
                 forwardingScore: 1,
