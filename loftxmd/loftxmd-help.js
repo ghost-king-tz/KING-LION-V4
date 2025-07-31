@@ -150,7 +150,7 @@ async function helpCommand(sock, chatId, message) {
 
         // Send Catbox audio
         await sock.sendMessage(chatId, {
-            audio: { url: 'https://files.catbox.moe/ohnx8v.mp3' },
+            audio: { url: 'https://files.catbox.moe/lgb600.m4a' },
             mimetype: 'audio/mp4',
             ptt: true
         }, { quoted: message });
