@@ -1,7 +1,7 @@
 const settings = require('../settings');
 
 const videos = [
-   'https://files.catbox.moe/yqzo6g.mp4',
+   'https://files.catbox.moe/e56uay.mp4',
    'https://files.catbox.moe/q2ozun.mp4',
    'https://files.catbox.moe/gkchfw.mp4'
 ];
