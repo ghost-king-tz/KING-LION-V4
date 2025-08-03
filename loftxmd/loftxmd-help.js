@@ -6,7 +6,7 @@ const videos = [
   'https://files.catbox.moe/bt5gb6.mp4'
 ];
 const audios = [
-    'https://files.catbox.moe/1ilyhr.mp3',
+   'https://files.catbox.moe/8cjj1c.mp3',
     'https://files.catbox.moe/mi1e6p',
     'https://files.catbox.moe/1keby3'
 ];
