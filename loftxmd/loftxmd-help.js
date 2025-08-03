@@ -8,7 +8,7 @@ const videos = [
 const audios = [
    'https://files.catbox.moe/8cjj1c.mp3',
     'https://files.catbox.moe/pjmxrz.mp3',
-    'https://files.catbox.moe/1keby3'
+    'https://files.catbox.moe/lgb600.m4a'
 ];
 
 async function helpCommand(sock, chatId, message, args = []) {
