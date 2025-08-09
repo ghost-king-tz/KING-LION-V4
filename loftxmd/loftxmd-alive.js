@@ -9,12 +9,12 @@ async function aliveCommand(sock, chatId, message) {
 KING LION 🦁: STATUS  [ ONLINE ]*
 Version: ${settings.version}
 
-✨ Anime Vibes Activated ✨
+✨ The power of Artificial intelligence 🧠✨
 > 領域展開 — 隈水
 
-Sasa bot yupo live na energy mpya!  
+KING LION V4 Engine Is Alive now 👨‍💻
 ═══════════════
-Type *.menu* kuona commands zote.
+Type *.menu* To see all command 💣.
 `
         }, { quoted: message });
 
