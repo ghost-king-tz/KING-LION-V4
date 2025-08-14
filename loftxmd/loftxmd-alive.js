@@ -10,7 +10,7 @@ KING LION 🦁: STATUS  [ ONLINE ]*
 Version: ${settings.version}
 
 ✨ The power of Artificial intelligence 🧠✨
-> 領域展開 — 隈水
+>别以为我很弱，但我隐藏了我的 评价🗿
 
 KING LION V4 Engine Is Alive now 👨‍💻
 ═══════════════
@@ -20,7 +20,7 @@ Type *.menu* To see all command 💣.
 
         // Tuma audio/nyimbo kama PTT (voice note)
         await sock.sendMessage(chatId, {
-            audio: { url: 'https://files.catbox.moe/g6y8qe.mp3' },
+            audio: { url: 'https://files.catbox.moe/9bj10g.mp3' },
             mimetype: 'audio/mpeg',
             ptt: true
         }, { quoted: message });
