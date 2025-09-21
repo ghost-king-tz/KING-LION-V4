@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://files.catbox.moe/gfvjb5.mp4" alt="KING LION V4" width="1000"/>
+  <img src="https://files.catbox.moe/gfvjb5.mp4" alt="KING LION V4" width="300"/>
 </div>
 
 <br>
@@ -11,7 +11,7 @@
 <br>
 
 ✦𝙺𝙸𝙽𝙶 𝙻𝙸𝙾𝙽 𝚅𝟺✦  
-> powered by *☾✩⃛⃟ 𝔅𝔯𝔬𝔨𝔢𝔫 𝔖𝔬𝔲𝔩 𝔗𝔢𝔠𝔥 ☽✩⃛⃟*
+> powered by *𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆
 
 ---
 
