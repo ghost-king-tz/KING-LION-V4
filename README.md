@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://files.catbox.moe/7w6ezd.jpg" alt="KING LION V4" width="300"/>
+  <img src="https://files.catbox.moe/gfvjb5.mp4" alt="KING LION V4" width="1000"/>
 </div>
 
 <br>
