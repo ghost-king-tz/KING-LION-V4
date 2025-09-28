@@ -99,8 +99,8 @@ const crashCommand = require('./loftxmd/loftxmd-crashmenu');
 // Global settings
 global.packname = settings.packname;
 global.author = settings.author;
-global.channelLink =""
-global.ytch = "*LOFT-XMD* 💥";
+global.channelLink ="https://whatsapp.com/channel/0029VbAvB6k9sBI7O0j74q2N"
+global.ytch = "*𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆* 💥";
 
 // Add this near the top of main.js with other global configurations
 const channelInfo = {
@@ -108,8 +108,8 @@ const channelInfo = {
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363398106360290@newsletter',
-            newsletterName: '*LOFT-XMD* 💥',
+            newsletterJid: '0029VbAvB6k9sBI7O0j74q2N@newsletter',
+            newsletterName: '*𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆* 💥',
             serverMessageId: -1
         }
     }
