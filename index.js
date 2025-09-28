@@ -1,8 +1,8 @@
 /**
- * Main entry point for KING-LION-V4 WhatsApp Bot.
+ * Main entry point for SPECTRA-V1 WhatsApp Bot.
  * Modernized, maintainable, and robust version.
  * Author: ghost-king-tz
- * Date: 2025-09-27
+ * Date: 2025-08-28
  */
 
 const fs = require('fs');
@@ -36,7 +36,7 @@ try {
     owner = [];
 }
 
-global.botname = "KNIGHT BOT";
+global.botname = "SPECTRA-V1";
 global.themeemoji = "•";
 global.phoneNumber = process.env.BOT_PHONE_NUMBER || "911234567890";
 
@@ -156,7 +156,7 @@ async function startBot() {
             console.error("Error in handleMessages:", err);
             const jid = chatUpdate.messages?.[0]?.key?.remoteJid;
             if (jid) {
-                await bot.sendMessage(jid, { text: '❌ An error occurred while processing your message.' }).catch(() => {});
+                await bot.sendMessage(jid, { text: '❌ An error occurred while processing your message in SPECTRA-V1.' }).catch(() => {});
             }
         }
     });
@@ -178,17 +178,17 @@ async function startBot() {
                 const botNumber = bot.user?.id?.split(':')[0] + '@s.whatsapp.net';
                 if (botNumber) {
                     await bot.sendMessage(botNumber, {
-                        text: `KING LION Bot Connected Successfully!\nTime: ${new Date().toLocaleString()}\nStatus: Online and Ready!`,
+                        text: `🤖 SPECTRA-V1 Connected Successfully!\nTime: ${new Date().toLocaleString()}\nStatus: Online and Ready!`,
                     });
                 }
             } catch {}
             await delay(1500);
             console.log(chalk.cyan(`< ================================================== >`));
             console.log(chalk.magenta(`${global.themeemoji} YT CHANNEL: Broken Soul Tech`));
-            console.log(chalk.magenta(`${global.themeemoji} GITHUB: kinglion`));
+            console.log(chalk.magenta(`${global.themeemoji} GITHUB: ghost-king-tz`));
             console.log(chalk.magenta(`${global.themeemoji} WA NUMBER: ${owner}`));
-            console.log(chalk.magenta(`${global.themeemoji} CREDIT: KING LION`));
-            console.log(chalk.green(`${global.themeemoji} Bot Connected Successfully! ✅`));
+            console.log(chalk.magenta(`${global.themeemoji} CREDIT: ghost-king-tz`));
+            console.log(chalk.green(`${global.themeemoji} SPECTRA-V1 Bot Connected Successfully! ✅`));
         }
         if (
             connection === "close" &&
@@ -229,7 +229,7 @@ async function startBot() {
             try {
                 let code = await bot.requestPairingCode(userNumber);
                 code = code?.match(/.{1,4}/g)?.join("-") || code;
-                console.log(chalk.black(chalk.bgGreen(`Your Pairing Code : `)), chalk.white(code));
+                console.log(chalk.black(chalk.bgGreen(`Your Pairing Code for SPECTRA-V1 : `)), chalk.white(code));
                 console.log(chalk.yellow(
                     `\nEnter this code in your WhatsApp app:\n1. Open WhatsApp\n2. Settings > Linked Devices\n3. Link a Device\n4. Enter code above`
                 ));
