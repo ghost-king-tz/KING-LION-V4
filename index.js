@@ -184,7 +184,7 @@ async function startBot() {
             } catch {}
             await delay(1500);
             console.log(chalk.cyan(`< ================================================== >`));
-            console.log(chalk.magenta(`${global.themeemoji} YT CHANNEL: Broken Soul Tech`));
+            console.log(chalk.magenta(`${global.themeemoji} YT CHANNEL: 𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆`));
             console.log(chalk.magenta(`${global.themeemoji} GITHUB: ghost-king-tz`));
             console.log(chalk.magenta(`${global.themeemoji} WA NUMBER: ${owner}`));
             console.log(chalk.magenta(`${global.themeemoji} CREDIT: ghost-king-tz`));
