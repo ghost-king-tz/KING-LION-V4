@@ -16,7 +16,7 @@ async function pingCommand(sock, chatId, message) {
         // CAPTION ya ping kama jedwali
         const videoCaption = `
 ───────────────
-*𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD: SYSTEM PING*
+*𝐒𝐏𝐄𝐂𝐓𝐑𝐀-𝐕2: SYSTEM PING*
 ───────────────
 > Status: ONLINE 🟢
 > Ping: ${ping} ms ⚡
