@@ -1,4 +1,5 @@
 # 𝐒𝐏𝐄𝐂𝐓𝐑𝐀-𝐕2
+```Those Who Did not know Pain Will Never Understand True Peace```
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <p align="center"> 
   <u> A simple WhatsApp Multi Device Bot Dev 𝐆𝐇𝐎𝐒𝐓</u>
