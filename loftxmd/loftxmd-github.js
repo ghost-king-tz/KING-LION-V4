@@ -3,12 +3,12 @@ const fetch = require('node-fetch');
 
 async function githubCommand(sock, chatId, message) {
   try {
-    const res = await fetch('https://api.github.com/repos/smash-bot/loft-xmd');
+    const res = await fetch('https://api.github.com/repos/ghost-king-tz/spectra-v2');
     if (!res.ok) throw new Error('Error fetching repository data');
     const json = await res.json();
 
     const caption = `
-*乂  𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝 乂*
+*乂  𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆 乂*
 
 ✩  *Name*: ${json.name}
 ✩  *Watchers*: ${json.watchers_count}
@@ -18,7 +18,7 @@ async function githubCommand(sock, chatId, message) {
 ✩  *Forks*: ${json.forks_count}
 ✩  *Stars*: ${json.stargazers_count}
 
-「Powered by 𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD」
+「Powered by 𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆」
 `.trim();
 
     await sock.sendMessage(chatId, {
