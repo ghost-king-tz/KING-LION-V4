@@ -188,7 +188,7 @@ async function startBot() {
             console.log(chalk.magenta(`${global.themeemoji} GITHUB: ghost-king-tz`));
             console.log(chalk.magenta(`${global.themeemoji} WA NUMBER: ${owner}`));
             console.log(chalk.magenta(`${global.themeemoji} CREDIT: ghost-king-tz`));
-            console.log(chalk.green(`${global.themeemoji} SPECTRA-V1 Bot Connected Successfully! ✅`));
+            console.log(chalk.green(`${global.themeemoji} SPECTRA-V2 Bot Connected Successfully! ✅`));
         }
         if (
             connection === "close" &&
