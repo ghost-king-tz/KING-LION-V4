@@ -1,10 +1,3 @@
-/**
- * Main entry point for SPECTRA-V1 WhatsApp Bot.
- * Modernized, maintainable, and robust version.
- * Author: ghost-king-tz
- * Date: 2025-08-28
- */
-
 const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
@@ -21,14 +14,12 @@ const {
     jidDecode,
     jidNormalizedUser,
     delay,
-    DisconnectReason,
 } = require('@whiskeysockets/baileys');
 
 const { handleMessages, handleGroupParticipantUpdate, handleStatus } = require('./main');
 const { smsg } = require('./lib/myfunc');
 const settings = require('./settings');
 
-// Load owner data
 let owner = [];
 try {
     owner = JSON.parse(fs.readFileSync('./data/owner.json'));
@@ -36,20 +27,18 @@ try {
     owner = [];
 }
 
-global.botname = "SPECTRA-V1";
+global.botname = "SPECTRA-V2";
 global.themeemoji = "•";
 global.phoneNumber = process.env.BOT_PHONE_NUMBER || "911234567890";
 
 const pairingCode = !!global.phoneNumber || process.argv.includes("--pairing-code");
 const useMobile = process.argv.includes("--mobile");
 
-// CLI readline
 const rl = process.stdin.isTTY ? readline.createInterface({ input: process.stdin, output: process.stdout }) : null;
 const question = (text) => rl
     ? new Promise(resolve => rl.question(text, resolve))
     : Promise.resolve(settings.ownerNumber || global.phoneNumber);
 
-// Simple in-memory store
 const store = {
     messages: {},
     contacts: {},
@@ -101,7 +90,6 @@ async function startBot() {
 
     store.bind(bot.ev);
 
-    // JID utils
     bot.decodeJid = (jid) => {
         if (!jid) return jid;
         if (/:\d+@/gi.test(jid)) {
@@ -111,7 +99,6 @@ async function startBot() {
         return jid;
     };
 
-    // Get name util
     bot.getName = async (jid, withoutContact = false) => {
         const id = bot.decodeJid(jid);
         let v;
@@ -131,13 +118,11 @@ async function startBot() {
     bot.public = true;
     bot.serializeM = (m) => smsg(bot, m, store);
 
-    // Unified messages.upsert handler
     bot.ev.on('messages.upsert', async chatUpdate => {
         try {
             const mek = chatUpdate.messages?.[0];
             if (!mek?.message) return;
 
-            // Handle ephemeral
             mek.message = Object.keys(mek.message)[0] === 'ephemeralMessage'
                 ? mek.message.ephemeralMessage.message
                 : mek.message;
@@ -147,21 +132,14 @@ async function startBot() {
             }
 
             if (!bot.public && !mek.key.fromMe && chatUpdate.type === 'notify') return;
-
-            // Ignore special system messages
             if (mek.key.id && mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return;
 
             await handleMessages(bot, chatUpdate, true);
         } catch (err) {
             console.error("Error in handleMessages:", err);
-            const jid = chatUpdate.messages?.[0]?.key?.remoteJid;
-            if (jid) {
-                await bot.sendMessage(jid, { text: '❌ An error occurred while processing your message in SPECTRA-V1.' }).catch(() => {});
-            }
         }
     });
 
-    // Contacts
     bot.ev.on('contacts.update', update => {
         for (const contact of update) {
             const id = bot.decodeJid(contact.id);
@@ -169,26 +147,10 @@ async function startBot() {
         }
     });
 
-    // Connection
     bot.ev.on('connection.update', async (s) => {
         const { connection, lastDisconnect } = s;
         if (connection === "open") {
-            console.log(chalk.yellow(`🌿 Connected as ${JSON.stringify(bot.user, null, 2)}`));
-            try {
-                const botNumber = bot.user?.id?.split(':')[0] + '@s.whatsapp.net';
-                if (botNumber) {
-                    await bot.sendMessage(botNumber, {
-                        text: `🤖 SPECTRA-V1 Connected Successfully!\nTime: ${new Date().toLocaleString()}\nStatus: Online and Ready!`,
-                    });
-                }
-            } catch {}
-            await delay(1500);
-            console.log(chalk.cyan(`< ================================================== >`));
-            console.log(chalk.magenta(`${global.themeemoji} YT CHANNEL: 𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆`));
-            console.log(chalk.magenta(`${global.themeemoji} GITHUB: ghost-king-tz`));
-            console.log(chalk.magenta(`${global.themeemoji} WA NUMBER: ${owner}`));
-            console.log(chalk.magenta(`${global.themeemoji} CREDIT: ghost-king-tz`));
-            console.log(chalk.green(`${global.themeemoji} SPECTRA-V2 Bot Connected Successfully! ✅`));
+            console.log(chalk.green(`✅ SPECTRA-V2 Connected: ${bot.user.id}`));
         }
         if (
             connection === "close" &&
@@ -196,32 +158,26 @@ async function startBot() {
             lastDisconnect.error &&
             lastDisconnect.error.output.statusCode !== 401
         ) {
-            startBot();
+            startBot(); // Reconnect
         }
     });
 
     bot.ev.on('creds.update', saveCreds);
 
-    // Group participants
     bot.ev.on('group-participants.update', async (update) => {
         await handleGroupParticipantUpdate(bot, update);
     });
 
-    // Pairing code
+    // PAIRING CODE
     if (pairingCode && !state.creds?.registered) {
         if (useMobile) throw new Error('Cannot use pairing code with mobile API');
 
-        let userNumber = global.phoneNumber || await question(
-            chalk.bgBlack(chalk.greenBright(
-                `Please type your WhatsApp number 😍\nFormat: 6281376552730 (without + or spaces): `
-            ))
-        );
-
+        let userNumber = global.phoneNumber || await question("Enter phone number: ");
         userNumber = userNumber.replace(/[^0-9]/g, '');
         if (!userNumber.startsWith('+')) userNumber = '+' + userNumber;
 
         if (!PhoneNumber(userNumber).isValid()) {
-            console.log(chalk.red('Invalid phone number. Please enter full international format.'));
+            console.log(chalk.red('Invalid phone number.'));
             process.exit(1);
         }
 
@@ -229,13 +185,9 @@ async function startBot() {
             try {
                 let code = await bot.requestPairingCode(userNumber);
                 code = code?.match(/.{1,4}/g)?.join("-") || code;
-                console.log(chalk.black(chalk.bgGreen(`Your Pairing Code for SPECTRA-V1 : `)), chalk.white(code));
-                console.log(chalk.yellow(
-                    `\nEnter this code in your WhatsApp app:\n1. Open WhatsApp\n2. Settings > Linked Devices\n3. Link a Device\n4. Enter code above`
-                ));
+                console.log(chalk.green(`🔗 Pairing Code: ${code}`));
             } catch (error) {
-                console.error('Error requesting pairing code:', error);
-                console.log(chalk.red('Failed to get pairing code. Please check your number and try again.'));
+                console.error('Failed to get pairing code:', error);
             }
         }, 2000);
     }
@@ -243,11 +195,12 @@ async function startBot() {
     return bot;
 }
 
-// Error handling
+// Run the bot
 startBot().catch(error => {
     console.error('Fatal error:', error);
     process.exit(1);
 });
+
 process.on('uncaughtException', err => console.error('Uncaught Exception:', err));
 process.on('unhandledRejection', err => console.error('Unhandled Rejection:', err));
 
@@ -255,7 +208,18 @@ process.on('unhandledRejection', err => console.error('Unhandled Rejection:', er
 const file = require.resolve(__filename);
 fs.watchFile(file, () => {
     fs.unwatchFile(file);
-    console.log(chalk.redBright(`Update ${__filename}`));
+    console.log(chalk.redBright(`Updated ${__filename}`));
     delete require.cache[file];
     require(file);
+});
+
+// ✅ EXPRESS SERVER FOR HEROKU
+const express = require('express');
+const app = express();
+app.get('/', (req, res) => {
+    res.send('🤖 SPECTRA-V2 WhatsApp Bot is alive!');
+});
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(chalk.green(`🌐 Web server running on port ${port}`));
 });
