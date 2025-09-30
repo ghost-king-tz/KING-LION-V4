@@ -1,16 +1,18 @@
 {
-  "name": "smash-v1",
+  "name": "spectra-v2",
   "version": "1.0.0",
-  "description": "WhatsApp Bot",
+  "description": "SPECTRA-V2 WhatsApp Bot",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docker:build": "docker build -t smash-v1 .",
-    "docker:run": "docker run -e SESSION_ID=$SESSION_ID smash-v1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "whatsapp-bot"
+    "whatsapp-bot",
+    "spectra-v2"
   ],
   "author": "",
   "license": "ISC",
