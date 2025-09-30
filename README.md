@@ -5,7 +5,7 @@
   <u> A simple WhatsApp Multi Device Bot Dev 𝐆𝐇𝐎𝐒𝐓</u>
 </p>
 <p align="center">
-<img src="https://files.catbox.moe/la2zx7.jpg"/>       
+<img src="https://files.catbox.moe/w0vmvc.jpg"/>       
 <p align="center">
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines=+•SPECTRA-V1•;MULTI-DEVICE+WHATSAPP+BOT;DEVELOPED+BY+GHOST+KING;RELEASED+DATE+05%2F12%2F2026." alt="Typing SVG" /></a>
 </p> 
