@@ -7,141 +7,88 @@ function convertToBool(text, fault = 'true') {
 
 module.exports = {
     SESSION_ID: process.env.SESSION_ID || "",
-    // add your Session Id make sure it starts with lite~
+    // Session Id (starts with lite~)
 
     PREFIX: process.env.PREFIX || ".",
-    // add your prefix for bot
+    // Bot command prefix
 
-    BOT_NAME: process.env.BOT_NAME || "KING LION V4 ",
-    // add bot name here for menu
+    BOT_NAME: process.env.BOT_NAME || "SPECTRA-V2",
+    // Bot name (always uppercase)
 
     MODE: process.env.MODE || "public",
-    // make bot public-private-inbox-group 
+    // Bot mode: public, private, inbox, group
 
     LINK_WHITELIST: "youtube.com,github.com",
-
-    LINK_WARN_LIMIT: 3, // Number of warnings before action
-
-    LINK_ACTION: "kick", // "kick", "mute", or "none"
+    LINK_WARN_LIMIT: 3,
+    LINK_ACTION: "kick",
 
     AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
-    // make true or false status auto seen
-
     AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
-    // make true if you want auto reply on status 
-
     AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
-    // make true if you want auto reply on status 
 
-    AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY 𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD😆*",
-    // set the auto reply message on status reply  
+    AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY 𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆😆*",
 
     WELCOME: process.env.WELCOME || "true",
-    // true if want welcome and goodbye msg in groups 
-
     ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
-    // make true to know who dismiss or promoted a member in group
-
     ANTI_LINK: process.env.ANTI_LINK || "true",
-    // make anti link true,false for groups 
-
     MENTION_REPLY: process.env.MENTION_REPLY || "false",
-    // make true if want auto voice reply if someone mention you 
 
     MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/lm4a0b.jpg",
-    // add custom menu and mention reply image url
-
     ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/osou52.jpg",
-    // add img for alive msg
 
     LIVE_MSG: process.env.LIVE_MSG || 
-`> ʙᴏᴛ ɪs sᴘᴀʀᴋɪɴɢ ᴀᴄᴛɪᴠᴇ ᴀɴᴅ ᴀʟɪᴠᴇ
+`> ʙᴏᴛ ɪs ᴀᴄᴛɪᴠᴇ ✅
 
-ᴋᴇᴇᴘ ᴜsɪɴɢ ✦𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD✦ ғʀᴏᴍ 𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD ɪɴᴄ⚡
+ᴋᴇᴇᴘ ᴜsɪɴɢ ✦SPECTRA-V2✦ ғʀᴏᴍ 𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆 ⚡
 
 *© ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ - ᴍᴅ*
 
-> ɢɪᴛʜᴜʙ : github.com/ghost-king-tz/KING-LION-V4.𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD`,
-    // add alive msg here 
+> ɢɪᴛʜᴜʙ : github.com/ghost-king-tz/SPECTRA-V2`,
 
-    STICKER_NAME: process.env.STICKER_NAME || "𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD",
-    // type sticker pack name 
+    STICKER_NAME: process.env.STICKER_NAME || "𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆",
 
     CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
-    // make this true for custom emoji react  
-
     CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️‍🩹,❤️,💛,💚,💙,💜,🤎,🖤,🤍",
-    // choose custom react emojis by yourself 
 
     DELETE_LINKS: process.env.DELETE_LINKS || "false",
-    // automatic delete links without removing member 
 
     OWNER_NUMBER: process.env.OWNER_NUMBER || "26371475XXXX",
-    // add your bot owner number
-
-    OWNER_NAME: process.env.OWNER_NAME || "𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD",
-    // add bot owner name
-
-    DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD*",
-    // add bot owner description  
+    OWNER_NAME: process.env.OWNER_NAME || "𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆",
+    DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆*",
 
     READ_MESSAGE: process.env.READ_MESSAGE || "false",
-    // Turn true or false for automatic read msgs
-
     AUTO_REACT: process.env.AUTO_REACT || "false",
-    // make this true or false for auto react on all msgs
-
     ANTI_BAD: process.env.ANTI_BAD || "true",
-    // false or true for anti bad words  
-
     ANTI_LINK_KICK: process.env.ANTI_LINK_KICK || "true",
-    // make anti link true,false for groups 
-
     AUTO_STICKER: process.env.AUTO_STICKER || "false",
-    // make true for automatic stickers 
-
     AUTO_REPLY: process.env.AUTO_REPLY || "true",
-    // make true or false automatic text reply 
-
     ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "false",
-    // make true for always online 
-
     PUBLIC_MODE: process.env.PUBLIC_MODE || "false",
-    // make false if want private mode
-
     AUTO_TYPING: process.env.AUTO_TYPING || "true",
-    // true for automatic show typing  
-
     READ_CMD: process.env.READ_CMD || "false",
-    // true if want mark commands as read  
 
     DEV: process.env.DEV || "255719632816",
-    // replace with your whatsapp number  
 
     ANTI_VV: process.env.ANTI_VV || "true",
-    // true for anti once view 
-
     ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "inbox",
-    // change it to 'inbox' or 'same' if you want to resend deleted message in same chat 
 
     AUTO_RECORDING: process.env.AUTO_RECORDING || "false",
-    // make it true for auto recording 
 
     version: process.env.version || "0.0.5",
 
     START_MSG: process.env.START_MSG || 
-`*Hᴇʟʟᴏ ᴛʜᴇʀᴇ 𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMDᴄᴏɴɴᴇᴄᴛᴇᴅ! 👋🏻* 
+`*Hᴇʟʟᴏ ᴛʜᴇʀᴇ SPECTRA-V2 ᴄᴏɴɴᴇᴄᴛᴇᴅ! 👋🏻* 
 
-*ᴋᴇᴇᴘ ᴏɴ ᴜsɪɴɢ 𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD ᴍᴏᴅs🚩* 
+*ᴋᴇᴇᴘ ᴏɴ ᴜsɪɴɢ SPECTRA-V2 ᴍᴏᴅs🚩* 
 
-> sᴜʙsᴄʀɪʙᴇ ʏᴛ ᴄʜᴀɴɴᴇʟ ғᴏʀ ᴛᴜᴛᴏʀɪᴀʟs
-https://youtube.com/@loft_xmd
+> sᴜʙsᴄʀɪʙᴇ YᴏᴜTᴜʙᴇ ᴄʜᴀɴɴᴇʟ ғᴏʀ ᴛᴜᴛᴏʀɪᴀʟs
+https://youtube.com/@ghostking10k
 
 - *ʏᴏᴜʀ ʙᴏᴛ ᴘʀᴇғɪx: ➡️[ . ]*
 > - ʏᴏᴜ ᴄᴀɴ ᴄʜᴀɴɢᴇ ᴜʀ ᴘʀᴇғɪx ᴜsɪɴɢ ᴛʜᴇ .ᴘʀᴇғɪx ᴄᴏᴍᴍᴀɴᴅ
 
-> ᴅᴏɴᴛ ғᴏʀɢᴇᴛ ᴛᴏ sʜᴀʀᴇ, sᴛᴀʀ & ғᴏʀᴋ ᴛʜᴇ ʀᴇᴘᴏ ⬇️ 
-https://https://github.com/ghost-king-tz/KING-LION-V4.git
+> ᴅᴏɴᴛ ғᴏʀɢᴇᴛ ᴛᴏ ꜱʜᴀʀᴇ, ꜱᴛᴀʀ & ғᴏʀᴋ ᴛʜᴇ ʀᴇᴘᴏ ⬇️ 
+https://github.com/ghost-king-tz/SPECTRA-V2
 
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD`
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆`
 };
