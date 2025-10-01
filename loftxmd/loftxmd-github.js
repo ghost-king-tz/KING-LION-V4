@@ -8,7 +8,7 @@ async function githubCommand(sock, chatId, message) {
     const json = await res.json();
 
     const caption = `
-*乂  𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆 乂*
+*乂  𝐒𝐏𝐄𝐂𝐓𝐑𝐀-𝐕2 乂*
 
 ✩  *Name*: ${json.name}
 ✩  *Watchers*: ${json.watchers_count}
@@ -22,7 +22,7 @@ async function githubCommand(sock, chatId, message) {
 `.trim();
 
     await sock.sendMessage(chatId, {
-      video: { url: 'https://files.catbox.moe/gkchfw.mp4' },
+      image: { url: 'https://files.catbox.moe/w0vmvc.jpg' }, // tumia picha badala ya video
       caption: caption
     }, { quoted: message });
   } catch (error) {
