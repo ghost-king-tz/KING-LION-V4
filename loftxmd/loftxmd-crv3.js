@@ -51,3 +51,4 @@ async function crv3(prompt, duration = 45, outputFile = "crv3_output.mp4") {
   await crv3("A futuristic city at night with neon lights and flying cars", 47);
 })();
 
+
