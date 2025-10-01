@@ -10,8 +10,8 @@ async function pairCommand(sock, chatId, message, q) {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398106360290@newsletter',
-                        newsletterName: '*𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD* 🐛',
+                        newsletterJid: '0029VbAvB6k9sBI7O0j74q2N@newsletter',
+                        newsletterName: '*𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆* 🐛',
                         serverMessageId: -1
                     }
                 }
@@ -29,8 +29,8 @@ async function pairCommand(sock, chatId, message, q) {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398106360290@newsletter',
-                        newsletterName: '*𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD* 🐛',
+                        newsletterJid: '0029VbAvB6k9sBI7O0j74q2N@newsletter',
+                        newsletterName: '*𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆* 🐛',
                         serverMessageId: -1
                     }
                 }
@@ -48,8 +48,8 @@ async function pairCommand(sock, chatId, message, q) {
                         forwardingScore: 1,
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
-                            newsletterJid: '120363398106360290@newsletter',
-                            newsletterName: '*𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD* 🐛',
+                            newsletterJid: '0029VbAvB6k9sBI7O0j74q2N@newsletter',
+                            newsletterName: '*𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆* 🐛',
                             serverMessageId: -1
                         }
                     }
@@ -62,8 +62,8 @@ async function pairCommand(sock, chatId, message, q) {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398106360290@newsletter',
-                        newsletterName: '*𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD* 🐛',
+                        newsletterJid: '0029VbAvB6k9sBI7O0j74q2N@newsletter',
+                        newsletterName: '*𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆* 🐛',
                         serverMessageId: -1
                     }
                 }
@@ -85,8 +85,8 @@ async function pairCommand(sock, chatId, message, q) {
                             forwardingScore: 1,
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
-                                newsletterJid: '120363398106360290@newsletter',
-                                newsletterName: '*𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD*🐛',
+                                newsletterJid: '0029VbAvB6k9sBI7O0j74q2N@newsletter',
+                                newsletterName: '*𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆*🐛',
                                 serverMessageId: -1
                             }
                         }
@@ -106,8 +106,8 @@ async function pairCommand(sock, chatId, message, q) {
                         forwardingScore: 1,
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
-                            newsletterJid: '120363398106360290@newsletter',
-                            newsletterName: '*𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD* 🐛',
+                            newsletterJid: '0029VbAvB6k9sBI7O0j74q2N@newsletter',
+                            newsletterName: '*𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆* 🐛',
                             serverMessageId: -1
                         }
                     }
@@ -122,8 +122,8 @@ async function pairCommand(sock, chatId, message, q) {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363398106360290@newsletter',
-                    newsletterName: '*𝔅𝔯𝔬𝔨𝔢𝔫 𝕊𝕠𝕦𝕝-XMD* 🐛',
+                    newsletterJid: '0029VbAvB6k9sBI7O0j74q2N@newsletter',
+                    newsletterName: '*𝐆𝐇𝐎𝐒𝐓 𝐊𝐈𝐍𝐆* 🐛',
                     serverMessageId: -1
                 }
             }
