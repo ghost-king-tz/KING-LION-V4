@@ -1,24 +1,25 @@
 const settings = require("../settings");
+
 async function aliveCommand(sock, chatId, message) {
     try {
-        // Tuma video yenye caption ya alive
+        // Tuma picha yenye caption ya alive
         await sock.sendMessage(chatId, {
-            video: { url: 'https://files.catbox.moe/bt5gb6.mp4' }, // au tumia link ya attachment
+            image: { url: 'https://files.catbox.moe/w0vmvc.jpg' }, 
             caption: `
 ═══════════════
-KING LION 🦁: STATUS  [ ONLINE ]*
+𝐒𝐏𝐄𝐂𝐓𝐑𝐀-𝐕2 🤖: STATUS [ ONLINE ]*
 Version: ${settings.version}
 
-✨ The power of Artificial intelligence 🧠✨
->别以为我很弱，但我隐藏了我的 评价🗿
+“Wake up to reality. 
+Nothing ever goes as planned in this accursed world.” 🕶️
 
-KING LION V4 Engine Is Alive now 👨‍💻
+𝐒𝐏𝐄𝐂𝐓𝐑𝐀-𝐕2 Engine Is Alive Now 👨‍💻
 ═══════════════
-Type *.menu* To see all command 💣.
+Type *.menu* To see all commands 💣.
 `
         }, { quoted: message });
 
-        // Tuma audio/nyimbo kama PTT (voice note)
+        // Tuma audio kama PTT (voice note)
         await sock.sendMessage(chatId, {
             audio: { url: 'https://files.catbox.moe/9bj10g.mp3' },
             mimetype: 'audio/mpeg',
@@ -27,7 +28,7 @@ Type *.menu* To see all command 💣.
 
     } catch (error) {
         console.error('Error in alive command:', error);
-        await sock.sendMessage(chatId, { text: 'KING LION bot iko hewani!' }, { quoted: message });
+        await sock.sendMessage(chatId, { text: '𝐒𝐏𝐄𝐂𝐓𝐑𝐀-𝐕2 iko hewani!' }, { quoted: message });
     }
 }
 
