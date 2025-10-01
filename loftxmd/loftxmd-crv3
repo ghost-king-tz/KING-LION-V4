@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import fs from "fs";
 
-const API_KEY = "your_api_key_here";
+const API_KEY = "a7a9a1fc750264b40f6270aa";
 
 /**
  * crv3 - Generate AI video (Premium only)
@@ -50,3 +50,4 @@ async function crv3(prompt, duration = 45, outputFile = "crv3_output.mp4") {
 (async () => {
   await crv3("A futuristic city at night with neon lights and flying cars", 47);
 })();
+
